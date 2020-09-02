@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="2">
+
+  <testsuite name="test-with-pageobjects"
+    errors="0" failures="1" hostname="" id="" package="test-with-pageobjects" skipped="0"
+    tests="2" time="9.393" timestamp="">
+  
+    <testcase name="e2e tests using page objects" classname="test-with-pageobjects" time="0.8640" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="verify if string &#34;e2e-nightwatch&#34; is within the cli plugin links" classname="test-with-pageobjects" time="8.529" assertions="1">  <failure message="Expected element &lt;Section [name=app],Section [name=welcome],Element [name=@cliPluginLinks[0]]&gt; text to contain: &#34;e2e-nightwatch&#34; - element was not found - expected &#34;contain &#39;e2e-nightwatch&#39;&#34; but got: &#34;not present&#34; (5238ms)">    at Object.verify if string &#34;e2e-nightwatch&#34; is within the cli plugin links (D:\課程文件\softwareEngineering2 Code\1bdda2784da1447b96aec5f2a12e0416\front_end\tests\e2e\specs\test-with-pageobjects.js:28:27)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

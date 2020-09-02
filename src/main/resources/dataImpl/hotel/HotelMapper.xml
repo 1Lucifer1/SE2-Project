@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.hotel.data.hotel.HotelMapper">
+    <insert id="insertHotel" parameterType="com.example.hotel.po.Hotel"
+    useGeneratedKeys="true" keyProperty="id">
+        insert into Hotel(address,bizRegion,hotelDescription,hotelStar,hotelName,phoneNum,rate,manager_id)
+        values (#{address},#{bizRegion},#{description},#{hotelStar},#{hotelName},#{phoneNum},#{rate},#{managerId})
+    </insert>
+
+    <select id="selectAllHotel" resultMap="Hotel">
+        select * from Hotel
+    </select>
+    <select id="selectById" resultMap="Hotel">
+        select * from Hotel where id=#{id}
+    </select>
+
+    <select id="selectManagerHotel" resultMap="Hotel">
+        select * from Hotel where manager_id=#{managerId}
+    </select>
+
+    <delete id="deleteHotel">
+        delete from Hotel where id=#{id}
+    </delete>
+
+    <update id="updateHotelInfo">
+        update Hotel set hotelName=#{name},hotelDescription=#{description},address=#{address},bizRegion=#{bizRegion},hotelStar=#{hotelStar},phoneNum=#{phoneNum}
+        where id=#{id}
+    </update>
+
+    <update id="updateHotelRate">
+        update Hotel set rate=#{rate}
+        where id=#{id}
+    </update>
+
+    <resultMap id="Hotel" type="com.example.hotel.vo.HotelVO">
+        <id column="id" property="id"></id>
+        <result column="address" property="address"></result>
+        <result column="bizRegion" property="bizRegion"></result>
+        <result column="hotelDescription" property="description"></result>
+        <result column="hotelStar" property="hotelStar"></result>
+        <result column="hotelName" property="name"></result>
+        <result column="phoneNum" property="phoneNum"></result>
+        <result column="rate" property="rate"></result>
+        <result column="manager_id" property="managerId"></result>
+
+    </resultMap>
+
+
+</mapper>

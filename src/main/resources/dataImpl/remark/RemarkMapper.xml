@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.hotel.data.remark.RemarkMapper">
+
+    <insert id="insertRemark" parameterType="com.example.hotel.po.Remark"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into Remark(user_id,hotel_id,content,star, remark_time, user_name)
+        values (#{userId},#{hotelId},#{content},#{star},#{remarkTime}, #{userName})
+    </insert>
+
+    <select id="getRemarkByHotelId" resultMap="remark">
+        select * from Remark where hotel_id=#{hotelId}
+    </select>
+
+    <select id="getRemarkByUserId" resultMap="remark">
+        select * from Remark where user_id=#{userId}
+    </select>
+
+    <resultMap id="remark" type="com.example.hotel.po.Remark">
+        <id column="id" property="id"></id>
+        <result column="user_id" property="userId"></result>
+        <result column="hotel_id" property="hotelId"></result>
+        <result column="content" property="content"></result>
+        <result column="star" property="star"></result>
+        <result column="remark_time" property="remarkTime"></result>
+        <result column="user_name" property="userName"></result>
+    </resultMap>
+
+
+</mapper>

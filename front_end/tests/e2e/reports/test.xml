@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="test"
+    errors="1" failures="0" hostname="" id="" package="test" skipped="2"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+        Error: An error occurred while retrieving a new session: &#34;unknown error: Chrome failed to start: crashed.&#34;
+       at endReadableNT (_stream_readable.js:1226:12)
+       at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: An error occurred while retrieving a new session: &#34;unknown error: Chrome failed to start: crashed.&#34;
+       at endReadableNT (_stream_readable.js:1226:12)
+       at processTicksAndRejections (internal/process/task_queues.js:80:21)
+    </system-err>
+  
+
+    
+    <error message="An error occurred while retrieving a new session: &#34;unknown error: Chrome failed to start: crashed.&#34;"><![CDATA[
+      Error: An error occurred while retrieving a new session: &#34;unknown error: Chrome failed to start: crashed.&#34;
+    at JsonWireProtocol.handleSessionCreateError (/mnt/d/課程文件/softwareEngineering2 Code/1bdda2784da1447b96aec5f2a12e0416/front_end/node_modules/nightwatch/lib/transport/transport.js:103:15)
+    at HttpRequest.&lt;anonymous&gt; (/mnt/d/課程文件/softwareEngineering2 Code/1bdda2784da1447b96aec5f2a12e0416/front_end/node_modules/nightwatch/lib/transport/transport.js:167:16)
+    at HttpRequest.emit (events.js:314:20)
+    at HttpResponse.&lt;anonymous&gt; (/mnt/d/課程文件/softwareEngineering2 Code/1bdda2784da1447b96aec5f2a12e0416/front_end/node_modules/nightwatch/lib/http/request.js:131:19)
+    at HttpResponse.emit (events.js:314:20)
+    at IncomingMessage.&lt;anonymous&gt; (/mnt/d/課程文件/softwareEngineering2 Code/1bdda2784da1447b96aec5f2a12e0416/front_end/node_modules/nightwatch/lib/http/response.js:58:14)
+    at IncomingMessage.emit (events.js:326:22)
+    at endReadableNT (_stream_readable.js:1226:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="default e2e tests" classname="test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="example e2e test using a custom command" classname="test">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
